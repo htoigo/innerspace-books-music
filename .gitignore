@@ -34,6 +34,9 @@ bower_components
 # node-waf configuration
 .lock-wscript
 
+# Production
+build
+
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
 
@@ -69,8 +72,13 @@ web_modules/
 .yarn-integrity
 
 # dotenv environment variables file
-# .env
-# .env.test
+# HHT: Remove the ones that don't match *.local? I.e., use .local to specify environment not to publish?
+.env
+.env.local
+.env.development.local
+.env.test
+.env.test.local
+.env.production.local
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -113,6 +121,7 @@ dist
 .yarn/unplugged
 .yarn/build-state.yml
 .yarn/install-state.gz
+.pnp
 .pnp.*
 
 
@@ -122,3 +131,6 @@ dist
 *.css.map
 *.sass.map
 *.scss.map
+
+# Apple cruft
+.DS_Store

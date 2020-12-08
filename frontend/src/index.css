@@ -1,0 +1,49 @@
+html {
+  /* We will use rem units for many items since they scale up or down if the user
+   changes the font size in their browser. Having 1rem = 10px is convenient for
+   size calculations. Since most browsers default to a font size of 16px, by
+   setting font-size to 62.5%, we have the following:
+       1rem = 0.625 * 16px = 10px (with default browser settings)
+   */
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-size: 1.6rem;   /* keep 16px size by default */
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100%;
+}
+
+
+/* Common */
+
+h1 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+
+h2 {
+  font-size: 1.6rem;
+  padding: 1rem 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff8000;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+               monospace;
+}
