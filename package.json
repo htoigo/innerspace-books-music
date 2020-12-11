@@ -1,0 +1,28 @@
+{
+  "name": "cerebral",
+  "version": "1.0.0",
+  "description": "A web app for an online store selling books and music.",
+  "private": true,
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --watch backend --exec node backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/htoigo/cerebral-books-music.git"
+  },
+  "author": "Harry H. Toigo II",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/htoigo/cerebral-books-music/issues"
+  },
+  "homepage": "https://github.com/htoigo/cerebral-books-music#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
