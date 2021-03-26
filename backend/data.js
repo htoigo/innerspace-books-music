@@ -46,7 +46,7 @@ const data = {
       countInStock: 274,
       rating: 3.9,
       numReviews: 7047,
-      description: 'A landmark volume in science writing by on eof the great minds of our time, Stephen Hawking\'s book explores such profound questions as: How did the universe begin--and what made its start possible? Does time always flow forward? Is the universe unending--or are there boundaries? Are there other dimensions in space? What will happen when it all ends?',
+      description: 'A landmark volume in science writing by one of the great minds of our time, Stephen Hawking\'s book explores such profound questions as: How did the universe begin--and what made its start possible? Does time always flow forward? Is the universe unending--or are there boundaries? Are there other dimensions in space? What will happen when it all ends?',
     },
     {
       _id: '4',

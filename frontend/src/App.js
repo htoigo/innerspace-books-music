@@ -12,7 +12,7 @@ function App() {
 
         <header className="row">
           <div>
-            <a className="brand" href="/">Cerebral</a>
+            <a className="brand" href="/">InnerSpace</a>
           </div>
           <div>
             <a href="/cart">Cart</a>
