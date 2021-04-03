@@ -17,7 +17,6 @@ const data = {
   ],
   products: [
     {
-      _id: '1',
       category: 'Books',
       name: 'A Christmas Carol (Paperback)',
       title: 'A Christmas Carol',
@@ -33,7 +32,6 @@ const data = {
       description: 'A new and beautiful edition of A Christmas Carol by Charles Dickens first published in 1843 with John Leech\'s illustrations. Tole Publishing is pleased to offer this classic book with a modern touch.',
     },
     {
-      _id: '2',
       category: 'Books',
       name: 'The Old Curiosity Shop (Paperback)',
       title: 'The Old Curiosity Shop',
@@ -49,7 +47,6 @@ const data = {
       description: 'The story of Little Nell and her "tragedy of sorrows," told in a blend of realism and fairy-tale. This sensational bestselling story of Little Nell, the beautiful child thrown into a shadowy, terrifying world, seems to belong less to the history of the Victorian novel than to folklore, fairy tale, or myth.',
     },
     {
-      _id: '3',
       category: 'Books',
       name: 'A Brief History of Time (Hardcover)',
       title: 'A Brief History of Time',
@@ -65,7 +62,6 @@ const data = {
       description: 'A landmark volume in science writing by one of the great minds of our time, Stephen Hawking\'s book explores such profound questions as: How did the universe begin--and what made its start possible? Does time always flow forward? Is the universe unending--or are there boundaries? Are there other dimensions in space? What will happen when it all ends?',
     },
     {
-      _id: '4',
       category: 'Books',
       name: 'Brave New World (Large Print / Paperback)',
       title: 'Brave New World',
@@ -81,7 +77,6 @@ const data = {
       description: 'Aldous Huxley\'s profoundly important classic of world literature, Brave New World is a searching vision of an unequal, techologically-advanced future where humans are genetically bred, socially indoctrinated, and pharmaceutically anesthetized to passively uphold an authoritarian ruling order, all at the cost of our freedom, full humanity, and perhaps also our souls. A genius who spent his life decrying the onward march of the Machine, Huxley was a man of incomparable talents: equally an artist, a spiritual seeker, and one of history\'s keenest observers of human nature and civilization.',
     },
     {
-      _id: '5',
       category: 'CDs & Vinyl',
       name: 'Yo-Yo Ma: The 6 Unaccompanied Cello Suites, J. S. Bach (Audio CD)',
       title: 'The 6 Unaccompanied Cello Suites Complete',
@@ -100,7 +95,6 @@ const data = {
       description: 'Ma\'s readings of Bach are fairly liberal in rhythm an dphrasing and are decidedly more intuitive than analytical, with plenty of rubato and elongation of lines to suggest something like a free Romantic interpretation, far from any Baroque period re-creation. There is a pensive quality to these performances and Ma delivers a technically polished and intelligent performance that has grace and elegance.',
     },
     {
-      _id: '6',
       category: 'CDs & Vinyl',
       name: 'Beethoven: Piano Concerto No. 5 "Emperor" - Alfred Brendel (Audio CD)',
       title: 'Beethoven: Piano Concerto No. 5 "Emperor"',
