@@ -16,13 +16,14 @@ productRouter.get(
 productRouter.get(
   "/seed",
   expressAsyncHandler(async (req, res) => {
-    // await Product.remove({});
+    // await Product.deleteMany({});
 
     const createdProducts = await Product.insertMany(data.products);
     res.send( {createdProducts} );
   })
 );
 
+// Must be after handler for '/seed', bc '/:id' would match '/seed'.
 productRouter.get(
   "/:id",
   expressAsyncHandler(async (req, res) => {
