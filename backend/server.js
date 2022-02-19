@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
   res.send('Express Server at your service.');
 });
 
-app.use((err, req, res) => {
+app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message });
 });
 
