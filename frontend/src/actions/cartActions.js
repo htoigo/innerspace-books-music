@@ -1,5 +1,9 @@
 import axios from 'axios';
-import { CART_ADD_ITEM, CART_REMOVE_ITEM } from '../constants/cartConstants';
+import {
+  CART_ADD_ITEM,
+  CART_REMOVE_ITEM,
+  CART_SAVE_SHIPPING_ADDRESS,
+} from '../constants/cartConstants';
 
 export const addToCart = (productId, qty) => async (dispatch, getState) => {
   const { data } = await axios.get(`/api/products/${productId}`);
@@ -12,7 +16,7 @@ export const addToCart = (productId, qty) => async (dispatch, getState) => {
       numInStock: data.numInStock,
       product: data._id,
       qty,
-    }
+    },
   });
   // Persist cart items in local storage across page reloads.
   localStorage.setItem('cartItems', JSON.stringify(getState().cart.cartItems));
@@ -21,8 +25,13 @@ export const addToCart = (productId, qty) => async (dispatch, getState) => {
 export const removeFromCart = (productId) => (dispatch, getState) => {
   dispatch({
     type: CART_REMOVE_ITEM,
-    payload: productId
+    payload: productId,
   });
   // Persist cart items in local storage across page reloads.
   localStorage.setItem('cartItems', JSON.stringify(getState().cart.cartItems));
+};
+
+export const saveShippingAddress = (data) => (dispatch) => {
+  dispatch({ type: CART_SAVE_SHIPPING_ADDRESS, payload: data });
+  localStorage.setItem('shippingAddress', JSON.stringify(data));
 };

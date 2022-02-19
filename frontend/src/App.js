@@ -6,6 +6,7 @@ import ProductScreen from './screens/ProductScreen';
 import CartScreen from './screens/CartScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import SigninScreen from './screens/SigninScreen';
+import ShippingAddressScreen from './screens/ShippingAddressScreen';
 import { signout } from './actions/userActions';
 import './App.css';
 // TODO: import logo from './logo.svg';
@@ -61,6 +62,7 @@ function App() {
           <Route path="/product/:id" component={ProductScreen} />
           <Route path="/signin" component={SigninScreen} />
           <Route path="/register" component={RegisterScreen} />
+          <Route path="/shipping" component={ShippingAddressScreen} />
           <Route path="/" exact component={HomeScreen} />
         </main>
 
