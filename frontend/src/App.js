@@ -7,6 +7,7 @@ import CartScreen from './screens/CartScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import SigninScreen from './screens/SigninScreen';
 import ShippingAddressScreen from './screens/ShippingAddressScreen';
+import PaymentMethodScreen from './screens/PaymentMethodScreen';
 import { signout } from './actions/userActions';
 import './App.css';
 // TODO: import logo from './logo.svg';
@@ -63,6 +64,7 @@ function App() {
           <Route path="/signin" component={SigninScreen} />
           <Route path="/register" component={RegisterScreen} />
           <Route path="/shipping" component={ShippingAddressScreen} />
+          <Route path="/payment" component={PaymentMethodScreen} />
           <Route path="/" exact component={HomeScreen} />
         </main>
 

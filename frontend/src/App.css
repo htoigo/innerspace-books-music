@@ -256,8 +256,6 @@ button.block {
 
 .form label {
   margin: 1rem 0;
-  /* Don't seem to need the following to get each widget on its own line? */
-  /* display: block; */
 }
 
 
