@@ -235,6 +235,11 @@ button.block {
   background-color: #e0e0ff;
 }
 
+.alert-success {
+  color: #20a020;
+  background-color: #eeffe0;
+}
+
 .alert-warning {
   color: #a02020;
   background-color: #ffe0e0;
