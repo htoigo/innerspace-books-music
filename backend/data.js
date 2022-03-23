@@ -3,17 +3,17 @@ import bcrypt from 'bcryptjs';
 const data = {
   users: [
     {
-      name: 'Harry',
+      name: 'Harry Toigo',
       email: 'admin@innerspace.com',
       password: bcrypt.hashSync('To the Moon!', 8),
       isAdmin: true,
     },
     {
-      name: 'Michelle',
+      name: 'Michelle Liu',
       email: 'michelle@innerspace.com',
       password: bcrypt.hashSync('Seven sisters', 8),
       isAdmin: false,
-    }
+    },
   ],
   products: [
     {
@@ -30,7 +30,8 @@ const data = {
       numInStock: 350,
       rating: 4.8,
       numReviews: 7341,
-      description: 'A new and beautiful edition of A Christmas Carol by Charles Dickens first published in 1843 with John Leech\'s illustrations. Tole Publishing is pleased to offer this classic book with a modern touch.',
+      description:
+        "A new and beautiful edition of A Christmas Carol by Charles Dickens first published in 1843 with John Leech's illustrations. Tole Publishing is pleased to offer this classic book with a modern touch.",
     },
     {
       productType: 'Books',
@@ -42,11 +43,12 @@ const data = {
       publisher: 'Penguin Classics',
       publicationDate: '2001-07-01',
       image: '/images/p2-front.jpg',
-      price: 13.00,
+      price: 13.0,
       numInStock: 265,
       rating: 4.1,
       numReviews: 5327,
-      description: 'The story of Little Nell and her "tragedy of sorrows," told in a blend of realism and fairy-tale. This sensational bestselling story of Little Nell, the beautiful child thrown into a shadowy, terrifying world, seems to belong less to the history of the Victorian novel than to folklore, fairy tale, or myth.',
+      description:
+        'The story of Little Nell and her "tragedy of sorrows," told in a blend of realism and fairy-tale. This sensational bestselling story of Little Nell, the beautiful child thrown into a shadowy, terrifying world, seems to belong less to the history of the Victorian novel than to folklore, fairy tale, or myth.',
     },
     {
       productType: 'Books',
@@ -62,7 +64,8 @@ const data = {
       numInStock: 274,
       rating: 3.9,
       numReviews: 7047,
-      description: 'A landmark volume in science writing by one of the great minds of our time, Stephen Hawking\'s book explores such profound questions as: How did the universe begin--and what made its start possible? Does time always flow forward? Is the universe unending--or are there boundaries? Are there other dimensions in space? What will happen when it all ends?',
+      description:
+        "A landmark volume in science writing by one of the great minds of our time, Stephen Hawking's book explores such profound questions as: How did the universe begin--and what made its start possible? Does time always flow forward? Is the universe unending--or are there boundaries? Are there other dimensions in space? What will happen when it all ends?",
     },
     {
       productType: 'Books',
@@ -78,7 +81,8 @@ const data = {
       numInStock: 350,
       rating: 5.0,
       numReviews: 10241,
-      description: 'Aldous Huxley\'s profoundly important classic of world literature, Brave New World is a searching vision of an unequal, techologically-advanced future where humans are genetically bred, socially indoctrinated, and pharmaceutically anesthetized to passively uphold an authoritarian ruling order, all at the cost of our freedom, full humanity, and perhaps also our souls. A genius who spent his life decrying the onward march of the Machine, Huxley was a man of incomparable talents: equally an artist, a spiritual seeker, and one of history\'s keenest observers of human nature and civilization.',
+      description:
+        "Aldous Huxley's profoundly important classic of world literature, Brave New World is a searching vision of an unequal, techologically-advanced future where humans are genetically bred, socially indoctrinated, and pharmaceutically anesthetized to passively uphold an authoritarian ruling order, all at the cost of our freedom, full humanity, and perhaps also our souls. A genius who spent his life decrying the onward march of the Machine, Huxley was a man of incomparable talents: equally an artist, a spiritual seeker, and one of history's keenest observers of human nature and civilization.",
     },
     {
       productType: 'Music',
@@ -95,7 +99,8 @@ const data = {
       numInStock: 0,
       rating: 3.3,
       numReviews: 427,
-      description: 'Ma\'s readings of Bach are fairly liberal in rhythm an dphrasing and are decidedly more intuitive than analytical, with plenty of rubato and elongation of lines to suggest something like a free Romantic interpretation, far from any Baroque period re-creation. There is a pensive quality to these performances and Ma delivers a technically polished and intelligent performance that has grace and elegance.',
+      description:
+        "Ma's readings of Bach are fairly liberal in rhythm an dphrasing and are decidedly more intuitive than analytical, with plenty of rubato and elongation of lines to suggest something like a free Romantic interpretation, far from any Baroque period re-creation. There is a pensive quality to these performances and Ma delivers a technically polished and intelligent performance that has grace and elegance.",
     },
     {
       productType: 'Music',
@@ -112,7 +117,8 @@ const data = {
       numInStock: 155,
       rating: 4.9,
       numReviews: 29,
-      description: 'An erudite and extremely intelligent performance of Beethoven\'s mighty fifth piano concerto paired with a stunning interpretation of the long-drawn-out slowly developing Choral Fantasia, with its foreshadowings of the incomparable ninth symphony to come.',
+      description:
+        "An erudite and extremely intelligent performance of Beethoven's mighty fifth piano concerto paired with a stunning interpretation of the long-drawn-out slowly developing Choral Fantasia, with its foreshadowings of the incomparable ninth symphony to come.",
     },
   ],
 };
