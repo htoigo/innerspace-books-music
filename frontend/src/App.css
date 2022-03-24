@@ -197,6 +197,9 @@ button.block {
   width: 100%;
 }
 
+button.small {
+  font-size: 1.2rem;
+}
 
 /* Rating */
 
@@ -302,4 +305,25 @@ button.block {
 .checkout-steps > div.active {
   border-top-color: #f08000;
   color: #f08000;
+}
+
+/* Table */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table tbody tr:nth-of-type(odd) {
+  background-color: #f4f4f4;
+}
+
+.table td, .table th {
+  text-align: left;
+  border: 0.1rem #e4e4e4 solid;
+  padding: 0.5rem;
+}
+
+.table button {
+  margin: 0 0.2rem;
 }
