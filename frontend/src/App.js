@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import PrivateRoute from './components/PrivateRoute';
+import AdminRoute from './components/AdminRoute';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
 import CartScreen from './screens/CartScreen';
@@ -13,6 +14,7 @@ import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import OrderScreen from './screens/OrderScreen';
 import OrderHistoryScreen from './screens/OrderHistoryScreen';
 import ProfileScreen from './screens/ProfileScreen';
+import ProductListScreen from './screens/ProductListScreen';
 import { signout } from './actions/userActions';
 import './App.css';
 // TODO: import logo from './logo.svg';
@@ -66,6 +68,27 @@ function App() {
             ) : (
               <Link to="/signin">Sign In</Link>
             )}
+            {userInfo && userInfo.isAdmin && (
+              <div className="dropdown">
+                <Link to="#admin">
+                  Admin <i className="fa fa-caret-down"></i>{' '}
+                </Link>
+                <ul className="dropdown-content">
+                  <li>
+                    <Link to="/dashboard">Dashboard</Link>
+                  </li>
+                  <li>
+                    <Link to="/productlist">Products</Link>
+                  </li>
+                  <li>
+                    <Link to="/orderlist">Orders</Link>
+                  </li>
+                  <li>
+                    <Link to="/userlist">Users</Link>
+                  </li>
+                </ul>
+              </div>
+            )}
           </div>
         </header>
 
@@ -80,6 +103,7 @@ function App() {
           <Route path="/order/:id" component={OrderScreen} />
           <Route path="/orderhistory" component={OrderHistoryScreen} />
           <PrivateRoute path="/profile" component={ProfileScreen} />
+          <AdminRoute path="/productlist" component={ProductListScreen} />
           <Route path="/" exact component={HomeScreen} />
         </main>
 
