@@ -9,9 +9,15 @@ const data = {
       isAdmin: true,
     },
     {
-      name: 'Michelle Liu',
-      email: 'michelle@innerspace.com',
+      name: 'Michelle Dan Liu',
+      email: 'michelle@comcast.net',
       password: bcrypt.hashSync('Seven sisters', 8),
+      isAdmin: false,
+    },
+    {
+      name: 'Lee E. Bernard',
+      email: 'lee@stickersignlabel.com',
+      password: bcrypt.hashSync('L33b0 1s My N@me', 8),
       isAdmin: false,
     },
   ],
