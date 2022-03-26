@@ -45,7 +45,7 @@ productRouter.post(
     const product = new Product({
       productType: 'Books',
       category: 'Literature',
-      name: 'Sample name' + Date.now(),
+      name: 'Sample name ' + Date.now(),
       title: 'Sample title',
       format: 'Paperback',
       author: 'Sample author',
