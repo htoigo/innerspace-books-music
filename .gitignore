@@ -1,4 +1,37 @@
+# -*- mode: gitignore; -*-
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# Emacs stuff
+*~
+\#*\#
+.\#*
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.dir-locals.el
+*_flymake.*
+flycheck_*.el
+/server/
+.projectile
+/elpa/
+/network-security.data
+/eshell/history
+/eshell/lastdir
+
+# Project specific
 frontend/package-lock.json
+
+# dotenv environment variables file
+# HHT: Remove the ones that don't match *.local? I.e., use .local to specify environment not to publish?
+.env
+.env.local
+.env.development.local
+.env.test
+.env.test.local
+.env.production.local
 
 # Logs
 logs
@@ -21,7 +54,7 @@ pids
 lib-cov
 
 # Coverage directory used by tools like istanbul
-coverage
+/coverage
 *.lcov
 
 # nyc test coverage
@@ -73,15 +106,6 @@ web_modules/
 # Yarn Integrity file
 .yarn-integrity
 
-# dotenv environment variables file
-# HHT: Remove the ones that don't match *.local? I.e., use .local to specify environment not to publish?
-.env
-.env.local
-.env.development.local
-.env.test
-.env.test.local
-.env.production.local
-
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 .parcel-cache
@@ -119,12 +143,18 @@ dist
 .vscode-test
 
 # yarn v2
+.pnp
+.pnp.*
+/.pnp
 .yarn/cache
 .yarn/unplugged
 .yarn/build-state.yml
 .yarn/install-state.gz
-.pnp
-.pnp.*
+**/.yarn/*
+!**/.yarn/releases
+!**/.yarn/plugins
+!**/.yarn/sdks
+!**/.yarn/versions
 
 
 # Sass
