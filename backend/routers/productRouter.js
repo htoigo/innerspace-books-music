@@ -1,6 +1,7 @@
 import express from 'express';
 import expressAsyncHandler from 'express-async-handler';
 import Product from '../models/productModel.js';
+import { isAdmin, isAuth } from '../utils.js';
 import data from '../data.js';
 
 const productRouter = express.Router();
@@ -33,6 +34,32 @@ productRouter.get(
     } else {
       res.status(404).send({ message: 'Product not found.' });
     }
+  })
+);
+
+productRouter.post(
+  '/',
+  isAuth,
+  isAdmin,
+  expressAsyncHandler(async (req, res) => {
+    const product = new Product({
+      productType: 'Books',
+      category: 'Literature',
+      name: 'Sample name' + Date.now(),
+      title: 'Sample title',
+      format: 'Paperback',
+      author: 'Sample author',
+      publisher: 'Sample publisher',
+      publicationDate: Date.now(),
+      image: '/images/p1-front.jpg',
+      price: 0.0,
+      numInStock: 0,
+      rating: 0,
+      numReviews: 0,
+      description: 'Sample book description.',
+    });
+    const createdProduct = await product.save();
+    res.send({ message: 'New product created.', product: createdProduct });
   })
 );
 
