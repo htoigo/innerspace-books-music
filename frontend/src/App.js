@@ -15,6 +15,7 @@ import OrderScreen from './screens/OrderScreen';
 import OrderHistoryScreen from './screens/OrderHistoryScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import ProductListScreen from './screens/ProductListScreen';
+import ProductEditScreen from './screens/ProductEditScreen';
 import { signout } from './actions/userActions';
 import './App.css';
 // TODO: import logo from './logo.svg';
@@ -104,6 +105,11 @@ function App() {
           <Route path="/orderhistory" component={OrderHistoryScreen} />
           <PrivateRoute path="/profile" component={ProfileScreen} />
           <AdminRoute path="/productlist" component={ProductListScreen} />
+          <AdminRoute
+            path="/product/:id/edit"
+            exact
+            component={ProductEditScreen}
+          />
           <Route path="/" exact component={HomeScreen} />
         </main>
 
