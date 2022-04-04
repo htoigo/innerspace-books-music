@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { detailsProduct } from '../actions/productActions';
+import { detailsProduct, updateProduct } from '../actions/productActions';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
+import { PRODUCT_UPDATE_RESET } from '../constants/productConstants';
 
 export default function ProductEditScreen(props) {
   const productId = props.match.params.id;
@@ -21,11 +22,24 @@ export default function ProductEditScreen(props) {
   const productDetails = useSelector((state) => state.productDetails);
   const { loading, error, product } = productDetails;
 
+  const productUpdate = useSelector((state) => state.productUpdate);
+  const {
+    loading: loadingUpdate,
+    error: errorUpdate,
+    success: successUpdate,
+  } = productUpdate;
+
   const dispatch = useDispatch();
 
   useEffect(() => {
     if (!product || product._id !== productId) {
       dispatch(detailsProduct(productId));
+    } else if (successUpdate) {
+      // Clear the success field to avoid running this over & over.
+      dispatch({ type: PRODUCT_UPDATE_RESET });
+      // Ensure product object fields get the updated values.
+      dispatch(detailsProduct(productId));
+      props.history.push('/productlist');
     } else {
       setProductType(product.productType);
       setCategory(product.category);
@@ -38,11 +52,25 @@ export default function ProductEditScreen(props) {
       setNumInStock(product.numInStock);
       setDescription(product.description);
     }
-  }, [product, dispatch, productId]);
+  }, [product, dispatch, productId, successUpdate, props.history]);
 
   const submitHandler = (event) => {
     event.preventDefault();
-    // TODO: Dispatch update product action.
+    dispatch(
+      updateProduct({
+        _id: productId,
+        productType,
+        category,
+        name,
+        title,
+        format,
+        publicationDate,
+        image,
+        price,
+        numInStock,
+        description,
+      })
+    );
   };
 
   return (
@@ -51,6 +79,10 @@ export default function ProductEditScreen(props) {
         <div>
           <h1>Edit Product {productId}</h1>
         </div>
+        {loadingUpdate && <LoadingBox />}
+        {errorUpdate && (
+          <MessageBox variant="warning">{errorUpdate}</MessageBox>
+        )}
         {loading ? (
           <LoadingBox />
         ) : error ? (

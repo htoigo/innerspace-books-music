@@ -63,4 +63,31 @@ productRouter.post(
   })
 );
 
+productRouter.put(
+  '/:id',
+  isAuth,
+  isAdmin,
+  expressAsyncHandler(async (req, res) => {
+    const productId = req.params.id;
+    const product = await Product.findById(productId);
+    if (product) {
+      product.productType = req.body.productType;
+      product.category = req.body.category;
+      product.name = req.body.name;
+      product.title = req.body.title;
+      product.format = req.body.format;
+      product.publicationDate = req.body.publicationDate;
+      product.image = req.body.image;
+      product.price = req.body.price;
+      product.numInStock = req.body.numInStock;
+      product.description = req.body.description;
+
+      const updatedProduct = await product.save();
+      res.send({ message: 'Product updated.', product: updatedProduct });
+    } else {
+      res.status(404).send({ message: 'Product not found.' });
+    }
+  })
+);
+
 export default productRouter;
