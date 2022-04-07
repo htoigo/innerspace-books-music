@@ -23,6 +23,7 @@ flycheck_*.el
 
 # Project specific
 frontend/package-lock.json
+/uploads/*.jpg
 
 # dotenv environment variables file
 # HHT: Remove the ones that don't match *.local? I.e., use .local to specify environment not to publish?
