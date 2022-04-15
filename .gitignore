@@ -2,6 +2,10 @@
 
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# Project specific
+frontend/package-lock.json
+/uploads/*.jpg
+
 # Emacs stuff
 *~
 \#*\#
@@ -20,10 +24,6 @@ flycheck_*.el
 /network-security.data
 /eshell/history
 /eshell/lastdir
-
-# Project specific
-frontend/package-lock.json
-/uploads/*.jpg
 
 # dotenv environment variables file
 # HHT: Remove the ones that don't match *.local? I.e., use .local to specify environment not to publish?
