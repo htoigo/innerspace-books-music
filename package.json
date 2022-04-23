@@ -6,8 +6,9 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --watch backend --exec node backend/server.js"
+    "start": "nodemon --watch backend --exec node backend/server.js",
+    "build": "cd frontend && npm install && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -32,5 +33,9 @@
     "eslint": "^7.15.0",
     "eslint-plugin-react": "^7.21.5",
     "nodemon": "^2.0.6"
+  },
+  "engines": {
+    "node": "17.9.0",
+    "npm": "8.5.5"
   }
 }
