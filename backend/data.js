@@ -1,5 +1,19 @@
 import bcrypt from 'bcryptjs';
 
+// MongoDB Database
+//
+// Project:  Project0
+//
+// Database users:
+//   Username            Password                    Role
+//   admin               Adm1n1ster1ngTheM0ng0es...  atlasAdmin@admin
+//   innerspace          Th1nk1ng1sTheBestW@y...     readWriteAnyDatabase@admin
+//
+// Cluster:   Cluster0
+// Database:  innerspace
+
+// Initial seed data for the MondoDB database:
+
 const data = {
   users: [
     {
