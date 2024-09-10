@@ -14,11 +14,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/innerspace', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-});
+mongoose.connect(process.env.MONGODB_URL || 'mongodb://127.0.0.1/innerspace');
 
 app.use('/api/users', userRouter);
 app.use('/api/products', productRouter);
