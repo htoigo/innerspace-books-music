@@ -1,20 +1,24 @@
 import express from 'express';
 import mongoose from 'mongoose';
-import dotenv from 'dotenv';
+import 'dotenv/config';
 import path from 'path';
 import userRouter from './routers/userRouter.js';
 import productRouter from './routers/productRouter.js';
 import orderRouter from './routers/orderRouter.js';
 import uploadRouter from './routers/uploadRouter.js';
 
-dotenv.config();
+//console.log(`MONGODB_URI=${process.env.MONGODB_URI}`);
+
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1/innerspace').then(() => {
+  console.log('Connected to database.');
+}).catch((err) => {
+  console.log(err.message);
+});
 
 const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-mongoose.connect(process.env.MONGODB_URL || 'mongodb://127.0.0.1/innerspace');
 
 app.use('/api/users', userRouter);
 app.use('/api/products', productRouter);
