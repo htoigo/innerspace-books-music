@@ -30,7 +30,7 @@ app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
 // The following allows Heroku to serve the React files in the build folder in
 // frontend.
 app.use(express.static(path.join(__dirname, '/frontend/build')));
-app.get('*', (req, res) =>
+app.get('{/*path}', (req, res) =>
   res.sendFile(path.join(__dirname, '/frontend/build/index.html'))
 );
 // app.get('/', (req, res) => {
