@@ -120,7 +120,7 @@ const data = {
       rating: 3.3,
       numReviews: 427,
       description:
-        "Ma's readings of Bach are fairly liberal in rhythm an dphrasing and are decidedly more intuitive than analytical, with plenty of rubato and elongation of lines to suggest something like a free Romantic interpretation, far from any Baroque period re-creation. There is a pensive quality to these performances and Ma delivers a technically polished and intelligent performance that has grace and elegance.",
+        "Ma's readings of Bach are fairly liberal in rhythm and phrasing and are decidedly more intuitive than analytical, with plenty of rubato and elongation of lines to suggest something like a free Romantic interpretation, far from any Baroque period re-creation. There is a pensive quality to these performances and Ma delivers a technically polished and intelligent performance that has grace and elegance.",
     },
     {
       productType: 'Music',
