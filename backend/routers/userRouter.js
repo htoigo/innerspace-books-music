@@ -13,7 +13,7 @@ userRouter.get(
     // CAUTION: The following line removes ALL documents from User collection!
     // This is only to be used when initially seeding the database! After doing
     // so, comment out the User.remove command.
-    await User.deleteMany({});
+    //await User.deleteMany({});
 
     const createdUsers = await User.insertMany(data.users);
     res.send({ createdUsers });
