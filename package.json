@@ -6,7 +6,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --watch backend --exec node backend/server.js",
+    "start": "nodemon --watch backend --exec node --trace-deprecation backend/server.js",
     "build": "cd frontend && npm install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
