@@ -6,8 +6,8 @@ import bcrypt from 'bcryptjs';
 //
 // Database users:
 //   Username            Password                    Role
-//   admin               Adm1n1ster1ngTheM0ng0es...  atlasAdmin@admin
-//   innerspace          Th1nk1ng1sTheBestW@y...     readWriteAnyDatabase@admin
+//   admin               ManagingTheM0ng0e$          atlasAdmin@admin
+//   innerspace          Th1nk1ng1sTheBestW@y        readWriteAnyDatabase@admin
 //
 // Cluster:   Cluster0
 // Database:  innerspace
